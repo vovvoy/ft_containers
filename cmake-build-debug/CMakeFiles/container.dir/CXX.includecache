@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ljerrica/Desktop/container/List.hpp
+memory
+-
+
+/Users/ljerrica/Desktop/container/main.cpp
+memory
+-
+iostream
+-
+string
+-
+vector
+-
+List.hpp
+/Users/ljerrica/Desktop/container/List.hpp
+list
+-
+
