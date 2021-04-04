@@ -63,10 +63,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ljerrica/Desktop/container
+CMAKE_SOURCE_DIR = /Users/ljerrica/Desktop/ft_containers
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ljerrica/Desktop/container/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ljerrica/Desktop/ft_containers/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/container.dir/depend.make
@@ -79,43 +79,28 @@ include CMakeFiles/container.dir/flags.make
 
 CMakeFiles/container.dir/main.cpp.o: CMakeFiles/container.dir/flags.make
 CMakeFiles/container.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ljerrica/Desktop/container/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/container.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/container.dir/main.cpp.o -c /Users/ljerrica/Desktop/container/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/container.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/container.dir/main.cpp.o -c /Users/ljerrica/Desktop/ft_containers/main.cpp
 
 CMakeFiles/container.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/container.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ljerrica/Desktop/container/main.cpp > CMakeFiles/container.dir/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ljerrica/Desktop/ft_containers/main.cpp > CMakeFiles/container.dir/main.cpp.i
 
 CMakeFiles/container.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/container.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ljerrica/Desktop/container/main.cpp -o CMakeFiles/container.dir/main.cpp.s
-
-CMakeFiles/container.dir/List.cpp.o: CMakeFiles/container.dir/flags.make
-CMakeFiles/container.dir/List.cpp.o: ../List.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ljerrica/Desktop/container/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/container.dir/List.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/container.dir/List.cpp.o -c /Users/ljerrica/Desktop/container/List.cpp
-
-CMakeFiles/container.dir/List.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/container.dir/List.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ljerrica/Desktop/container/List.cpp > CMakeFiles/container.dir/List.cpp.i
-
-CMakeFiles/container.dir/List.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/container.dir/List.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ljerrica/Desktop/container/List.cpp -o CMakeFiles/container.dir/List.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ljerrica/Desktop/ft_containers/main.cpp -o CMakeFiles/container.dir/main.cpp.s
 
 # Object files for target container
 container_OBJECTS = \
-"CMakeFiles/container.dir/main.cpp.o" \
-"CMakeFiles/container.dir/List.cpp.o"
+"CMakeFiles/container.dir/main.cpp.o"
 
 # External object files for target container
 container_EXTERNAL_OBJECTS =
 
 container: CMakeFiles/container.dir/main.cpp.o
-container: CMakeFiles/container.dir/List.cpp.o
 container: CMakeFiles/container.dir/build.make
 container: CMakeFiles/container.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ljerrica/Desktop/container/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable container"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable container"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/container.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,6 +113,6 @@ CMakeFiles/container.dir/clean:
 .PHONY : CMakeFiles/container.dir/clean
 
 CMakeFiles/container.dir/depend:
-	cd /Users/ljerrica/Desktop/container/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/ljerrica/Desktop/container /Users/ljerrica/Desktop/container /Users/ljerrica/Desktop/container/cmake-build-debug /Users/ljerrica/Desktop/container/cmake-build-debug /Users/ljerrica/Desktop/container/cmake-build-debug/CMakeFiles/container.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/ljerrica/Desktop/ft_containers/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/ljerrica/Desktop/ft_containers /Users/ljerrica/Desktop/ft_containers /Users/ljerrica/Desktop/ft_containers/cmake-build-debug /Users/ljerrica/Desktop/ft_containers/cmake-build-debug /Users/ljerrica/Desktop/ft_containers/cmake-build-debug/CMakeFiles/container.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/container.dir/depend
 

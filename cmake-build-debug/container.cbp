@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/ljerrica/Desktop/container/cmake-build-debug"/>
+				<Option working_dir="/Users/ljerrica/Desktop/ft_containers/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/ljerrica/Desktop/container/cmake-build-debug"/>
+				<Option working_dir="/Users/ljerrica/Desktop/ft_containers/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/ljerrica/Desktop/container/cmake-build-debug"/>
+				<Option working_dir="/Users/ljerrica/Desktop/ft_containers/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="container">
-				<Option output="/Users/ljerrica/Desktop/container/cmake-build-debug/container" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ljerrica/Desktop/container/cmake-build-debug"/>
+				<Option output="/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/container" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ljerrica/Desktop/ft_containers/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -52,15 +52,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 container"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 container"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="container/fast">
-				<Option output="/Users/ljerrica/Desktop/container/cmake-build-debug/container" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/ljerrica/Desktop/container/cmake-build-debug"/>
+				<Option output="/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/container" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ljerrica/Desktop/ft_containers/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -73,23 +73,20 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 container/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/container/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 container/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/ljerrica/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ljerrica/Desktop/container/List.cpp">
+		<Unit filename="/Users/ljerrica/Desktop/ft_containers/List/List.hpp">
 			<Option target="container"/>
 		</Unit>
-		<Unit filename="/Users/ljerrica/Desktop/container/List.hpp">
+		<Unit filename="/Users/ljerrica/Desktop/ft_containers/main.cpp">
 			<Option target="container"/>
 		</Unit>
-		<Unit filename="/Users/ljerrica/Desktop/container/main.cpp">
-			<Option target="container"/>
-		</Unit>
-		<Unit filename="/Users/ljerrica/Desktop/container/CMakeLists.txt">
+		<Unit filename="/Users/ljerrica/Desktop/ft_containers/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

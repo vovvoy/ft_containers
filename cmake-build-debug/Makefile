@@ -68,10 +68,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ljerrica/Desktop/container
+CMAKE_SOURCE_DIR = /Users/ljerrica/Desktop/ft_containers
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ljerrica/Desktop/container/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/ljerrica/Desktop/ft_containers/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ljerrica/Desktop/container/cmake-build-debug/CMakeFiles /Users/ljerrica/Desktop/container/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ljerrica/Desktop/ft_containers/cmake-build-debug/CMakeFiles /Users/ljerrica/Desktop/ft_containers/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ljerrica/Desktop/container/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ljerrica/Desktop/ft_containers/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,33 +143,6 @@ container/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/container.dir/build.make CMakeFiles/container.dir/build
 .PHONY : container/fast
 
-List.o: List.cpp.o
-
-.PHONY : List.o
-
-# target to build an object file
-List.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/container.dir/build.make CMakeFiles/container.dir/List.cpp.o
-.PHONY : List.cpp.o
-
-List.i: List.cpp.i
-
-.PHONY : List.i
-
-# target to preprocess a source file
-List.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/container.dir/build.make CMakeFiles/container.dir/List.cpp.i
-.PHONY : List.cpp.i
-
-List.s: List.cpp.s
-
-.PHONY : List.s
-
-# target to generate assembly for a file
-List.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/container.dir/build.make CMakeFiles/container.dir/List.cpp.s
-.PHONY : List.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -206,9 +179,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... container"
-	@echo "... List.o"
-	@echo "... List.i"
-	@echo "... List.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

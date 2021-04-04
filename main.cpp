@@ -2,33 +2,18 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "List.hpp"
+#include "List/List.hpp"
 #include <list>
-
-struct vov{
-    int a;
-    std::string str;
-    double d;
-};
-
-std::ostream & operator<<(std::ostream & os, const vov & op){
-    os << op.a << std::endl << op.str << std::endl << op.d;
-    return os;
-}
-
-template <typename T>
-void print(T bla){
-    std::cout << bla << std::endl;
-}
+//using namespace std;
 
 int main ()
 {
-    vov con;
-    con.a = 9;
-    con.str = "hell0";
-    con.d = 32.32;
-
-    print(con);
-
+//    list<int>
+    ft::list<int> list;
+    list.push_back(100);
+    list.push_back(50);
+    std::list<int> list1;
+    list1.push_back();
+    
     return 0;
 }

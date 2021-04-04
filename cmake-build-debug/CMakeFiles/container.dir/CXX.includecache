@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/ljerrica/Desktop/container/List.hpp
-memory
+/Users/ljerrica/Desktop/ft_containers/List/List.hpp
+iostream
 -
 
-/Users/ljerrica/Desktop/container/main.cpp
+/Users/ljerrica/Desktop/ft_containers/main.cpp
 memory
 -
 iostream
@@ -19,8 +19,8 @@ string
 -
 vector
 -
-List.hpp
-/Users/ljerrica/Desktop/container/List.hpp
+List/List.hpp
+/Users/ljerrica/Desktop/ft_containers/List/List.hpp
 list
 -
 
