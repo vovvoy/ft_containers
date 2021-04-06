@@ -9,11 +9,10 @@
 int main ()
 {
 //    list<int>
-    ft::list<int> list;
-    list.push_back(100);
-    list.push_back(50);
+    ft::list<int> lst;
+    lst.push_back(100);
+    lst.push_back(50);
     std::list<int> list1;
-    list1.push_back();
     
     return 0;
 }
