@@ -8,11 +8,13 @@
 
 int main ()
 {
-//    list<int>
-    ft::list<int> lst;
-    lst.push_back(100);
-    lst.push_back(50);
-    std::list<int> list1;
-    
+    ft::list<int> mylist;
+
+    // set some initial content:
+    for (int i=1; i<10; ++i) mylist.push_back(i);
+
+    mylist.resize(5);
+    mylist.resize(8,100);
+    mylist.resize(12);
     return 0;
 }
