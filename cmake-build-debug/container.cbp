@@ -83,6 +83,12 @@
 		<Unit filename="/Users/ljerrica/Desktop/ft_containers/List/List.hpp">
 			<Option target="container"/>
 		</Unit>
+		<Unit filename="/Users/ljerrica/Desktop/ft_containers/List/iterator.hpp">
+			<Option target="container"/>
+		</Unit>
+		<Unit filename="/Users/ljerrica/Desktop/ft_containers/List/utils.hpp">
+			<Option target="container"/>
+		</Unit>
 		<Unit filename="/Users/ljerrica/Desktop/ft_containers/main.cpp">
 			<Option target="container"/>
 		</Unit>

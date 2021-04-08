@@ -2,10 +2,11 @@
 #define CONTAINER_LIST_HPP
 
 #include <iostream>
+#include "iterator.hpp"
 
 namespace ft {
     template <typename T_Node>
-    class Doubly_Linked_Node {
+    struct Doubly_Linked_Node {
     public :
         Doubly_Linked_Node  *prev;
         Doubly_Linked_Node  *next;
@@ -13,11 +14,9 @@ namespace ft {
 
         Doubly_Linked_Node()
                 :
-                prev(NULL),
-                next(NULL)
-//                data(NULL)
+                prev(u_nullptr),
+                next(u_nullptr)
         {}
-        ~Doubly_Linked_Node(){};
     };
 
     template<class T, class Alloc = std::allocator<T> >
