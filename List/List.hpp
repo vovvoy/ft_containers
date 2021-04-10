@@ -2,7 +2,7 @@
 #define CONTAINER_LIST_HPP
 
 #include <iostream>
-#include "iterator.hpp"
+//#include "iterator.hpp"
 
 namespace ft {
     template <typename T_Node>
@@ -14,9 +14,115 @@ namespace ft {
 
         Doubly_Linked_Node()
                 :
-                prev(u_nullptr),
-                next(u_nullptr)
+                prev(NULL),
+                next(NULL)
         {}
+    };
+
+    template<typename T>
+    class Iterator {
+    public:
+        typedef T               value_type;
+        typedef value_type  *   pointer;
+        typedef value_type  &   reference;
+
+        Iterator(): elem(NULL){};
+        Iterator(Iterator<T> const & other) : elem(other.elem){};
+        Iterator & operator=(Iterator<T> const & other){
+            if (&other == this)
+                return *this;
+            this->elem = other.elem;
+            return *this;
+
+        };
+
+        Iterator(Doubly_Linked_Node<T> * tmp) {
+            elem = tmp;
+        };
+
+        ~Iterator(){};
+
+        reference   operator*(){ return elem->data; }
+        pointer     operator->(){ return &(this->operator*()); }
+        Iterator &  operator++(){
+            this->elem = this->elem->next;
+            return *this;
+        }
+        Iterator &  operator--(){
+            this->elem = this->elem->prev;
+            return *this;
+        }
+
+        Iterator    operator++(int){
+            Iterator rtn(*this);
+            operator++();
+            return (rtn);
+        }
+        Iterator operator--(int){
+            Iterator rtn(*this);
+            operator--();
+            return rtn;
+        }
+
+        friend bool operator==(const Iterator<T>& lhs, const Iterator<T>& rhs)
+        { return (lhs.elem == rhs.elem); }
+
+        friend bool operator!=(const Iterator<T>& lhs, const Iterator<T>& rhs)
+        { return (lhs.elem != rhs.elem); }
+        Doubly_Linked_Node<T> *elem;
+    };
+
+    template<typename T>
+    class Reverse_Iterator{
+    public:
+        typedef T               value_type;
+        typedef value_type  *   pointer;
+        typedef value_type  &   reference;
+
+        Reverse_Iterator(): elem(NULL){};
+        Reverse_Iterator(Reverse_Iterator<T> const & other) : elem(other.elem){};
+        Reverse_Iterator & operator=(Reverse_Iterator<T> const & other){
+            if (&other == this)
+                return *this;
+            this->elem = other.elem;
+            return *this;
+
+        };
+
+        Reverse_Iterator(Doubly_Linked_Node<T> * tmp) {
+            elem = tmp;
+        };
+
+        ~Reverse_Iterator(){};
+
+        reference   operator*(){ return elem->data; }
+        pointer     operator->(){ return &(this->operator*()); }
+        Reverse_Iterator &  operator++(){
+            this->elem = this->elem->prev;
+            return *this;
+        }
+        Reverse_Iterator &  operator--(){
+            this->elem = this->elem->next;
+            return *this;
+        }
+
+        Reverse_Iterator    operator++(int){
+            Reverse_Iterator rtn(*this);
+            operator++();
+            return (rtn);
+        }
+        Reverse_Iterator operator--(int){
+            Reverse_Iterator rtn(*this);
+            operator--();
+            return rtn;
+        }
+
+        friend bool operator==(const Reverse_Iterator<T>& lhs, const Reverse_Iterator<T>& rhs)
+        { return (lhs.elem == rhs.elem); }
+
+        friend bool operator!=(const Reverse_Iterator<T>& lhs, const Reverse_Iterator<T>& rhs)
+        { return (lhs.elem != rhs.elem); }
+        Doubly_Linked_Node<T> *elem;
     };
 
     template<class T, class Alloc = std::allocator<T> >
@@ -28,8 +134,8 @@ namespace ft {
         typedef typename Alloc::const_pointer             const_pointer;
         typedef typename Alloc::reference                 reference;
         typedef typename Alloc::const_reference           const_reference;
-//        typedef _List_iterator<T>                         iterator;
-//        typedef _List_const_iterator<T>                   const_iterator;
+        typedef Iterator<T>                               iterator;
+        typedef Reverse_Iterator<T>                          reverse_iterator;
 //        typedef std::reverse_iterator<const_iterator>     const_reverse_iterator;
 //        typedef std::reverse_iterator<iterator>           reverse_iterator;
         typedef size_t                                    size_type;
@@ -46,6 +152,21 @@ namespace ft {
             _last_node->prev = _last_node;
             _last_node->next = _last_node;
         }
+
+        list& operator= (const list & x)
+        {
+            if (&x == this)
+                return (*this);
+            this->clear();
+            this->_last_node = x._last_node;
+            return (*this);
+        }
+        iterator begin(){ return iterator (_last_node->next); }
+        iterator end(){ return iterator(_last_node); }
+        reverse_iterator rbegin(){ return reverse_iterator (_last_node->prev); }
+        reverse_iterator rend(){ return reverse_iterator (_last_node); }
+
+
 
         void push_front (const value_type& val){
             node_pointer tmp = _node_alloc.allocate(1);
