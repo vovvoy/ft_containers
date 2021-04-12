@@ -255,28 +255,30 @@ namespace ft {
             this->_node_alloc = save_node_alloc;
             this->_last_node = save_last_node;
         }
+        iterator	erase(iterator pos) {
+            node_pointer node = pos.elem->prev;
 
-		iterator	erase(iterator first, iterator last) {
-			while (first != last) {
-				this->erase(first++);
-			}
-			return first;
-		}
+            if (node->prev == _last_node)
+                _last_node->next = node->next;
+            else
+                node->prev->next = node->next;
+            if (node->next == _last_node)
+                _last_node->prev = node->prev;
+            else
+                node->next->prev = node->prev;
+            _node_alloc.destroy(node);
+            _node_alloc.deallocate(node, 1);
+            return pos;
+        }
 
-		iterator	erase(iterator pos) {
-			node_pointer node = pos->prev;
-			if (node->prev == _last_node)
-				_last_node->next = node->next;
-			else
-				node->prev->next = node->next;
-			if (node->next == _last_node)
-				_last_node->prev = node->prev;
-			else
-				node->next->prev = node->prev;
-			_node_alloc.destroy(node);
-			_node_alloc.deallocate(node, 1);
-			return pos;
-		}
+//		iterator	erase(iterator first, iterator last) {
+//			while (first != last) {
+//				this->erase(first++);
+//			}
+//			return first;
+//		}
+
+
 
         void unique(){
 			iterator it = begin();
