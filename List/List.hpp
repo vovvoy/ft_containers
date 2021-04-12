@@ -256,6 +256,39 @@ namespace ft {
             this->_last_node = save_last_node;
         }
 
+		iterator	erase(iterator first, iterator last) {
+			while (first != last) {
+				this->erase(first++);
+			}
+			return first;
+		}
+
+		iterator	erase(iterator pos) {
+			node_pointer node = pos->prev;
+			if (node->prev == _last_node)
+				_last_node->next = node->next;
+			else
+				node->prev->next = node->next;
+			if (node->next == _last_node)
+				_last_node->prev = node->prev;
+			else
+				node->next->prev = node->prev;
+			_node_alloc.destroy(node);
+			_node_alloc.deallocate(node, 1);
+			return pos;
+		}
+
+        void unique(){
+			iterator it = begin();
+			++it;
+			while (it != end()) {
+				if (*it == it->prev->data)
+					it = erase(it);
+				else
+					++it;
+			}
+        }
+
         bool empty() const { return _last_node->next == _last_node; }
 
         size_type size() const{
