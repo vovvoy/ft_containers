@@ -2,7 +2,6 @@
 #define CONTAINER_LIST_HPP
 
 #include <iostream>
-//#include "iterator.hpp"
 
 namespace ft {
     template <typename T_Node>
@@ -139,7 +138,7 @@ namespace ft {
 //        typedef std::reverse_iterator<const_iterator>     const_reverse_iterator;
 //        typedef std::reverse_iterator<iterator>           reverse_iterator;
         typedef size_t                                    size_type;
-//        typedef ptrdiff_t                                 difference_type;
+        typedef std::ptrdiff_t                                 difference_type;
         typedef Doubly_Linked_Node<value_type>              node;
 
 
@@ -151,6 +150,35 @@ namespace ft {
             _node_alloc.construct(_last_node, Doubly_Linked_Node<value_type>());
             _last_node->prev = _last_node;
             _last_node->next = _last_node;
+        }
+
+		~list()
+		{
+			this->clear();
+			_node_alloc.destroy(_last_node);
+			_node_alloc.deallocate(_last_node, 1);
+		}
+
+		iterator insert (iterator pos, const value_type& val){
+			node_pointer tmp = _node_alloc.allocate(1);
+			_node_alloc.construct(tmp, Doubly_Linked_Node<value_type>());
+			tmp->data = val;
+			node_pointer prev = pos.elem->prev;
+			pos.elem->prev = tmp;
+			tmp->prev = prev;
+			tmp->next = pos.elem;
+			prev->next = tmp;
+			return tmp;
+        }
+
+		void insert (iterator pos, size_type n, const value_type& val){
+        	for (int i = 0; i < n; i++)
+        		insert(pos, val);
+        }
+
+		void insert (iterator pos, iterator first, list::iterator last){
+			while (first != last)
+				insert(pos, *first++);
         }
 
         list& operator= (const list & x)
@@ -256,7 +284,7 @@ namespace ft {
             this->_last_node = save_last_node;
         }
         iterator	erase(iterator pos) {
-            node_pointer node = pos.elem->prev;
+            node_pointer node = pos.elem;
 
             if (node->prev == _last_node)
                 _last_node->next = node->next;
@@ -271,25 +299,43 @@ namespace ft {
             return pos;
         }
 
-//		iterator	erase(iterator first, iterator last) {
-//			while (first != last) {
-//				this->erase(first++);
-//			}
-//			return first;
-//		}
+		iterator	erase(iterator first, iterator last) {
+			while (first != last)
+				this->erase(first++);
+			return first;
+		}
 
 
 
         void unique(){
-			iterator it = begin();
-			++it;
-			while (it != end()) {
-				if (*it == it->prev->data)
-					it = erase(it);
-				else
-					++it;
+			iterator save;
+			iterator first = _last_node->next;
+
+			while (first != end())
+			{
+				save = (++first)--;
+				if (first.elem->prev != _last_node
+					&& first.elem->prev->data == first.elem->data)
+					erase(first.elem);
+				first = save;
 			}
         }
+
+		template <class BinaryPredicate>
+		void unique (BinaryPredicate binary_pred)
+		{
+			iterator save;
+			iterator first = _last_node->next;
+
+			while (first != end())
+			{
+				save = (++first)--;
+				if (first._node->prev != _last_node
+					&& binary_pred(*first,*((--first)++)))
+					_delete(first._node);
+				first = save;
+			}
+		}
 
         bool empty() const { return _last_node->next == _last_node; }
 
@@ -300,6 +346,22 @@ namespace ft {
                 cnt++;
             return cnt;
         }
+
+		void splice (iterator position, list& x)
+		{
+			iterator x_beg = x.begin();
+			iterator x_save;
+
+			while (x_beg != x.end())
+			{
+				x_save = (++x_beg)--;
+				x._split_node(x_beg.elem);
+				if (x != *this)
+					insert(position.elem, 1, x_beg.elem->data);
+				x_beg = x_save;
+			}
+			x.clear();
+		}
 
         size_type max_size() const { return _node_alloc().max_size(); }
 
@@ -374,6 +436,19 @@ namespace ft {
                 pop_back();
         }
 
+		template <class InputIterator>
+		void assign (InputIterator first, InputIterator last)
+		{
+			this->clear();
+			this->insert(this->end(), first, last);
+		}
+
+		void assign (size_type n, const value_type& val)
+		{
+			this->clear();
+			this->insert(this->end(), n, val);
+		}
+
         void resize (size_type n, value_type val = value_type()){
 //            if (this->max_size() - this->size() < n)
 //                throw (std::length_error("list::resize"));
@@ -393,6 +468,24 @@ namespace ft {
     private:
         typedef std::allocator<Doubly_Linked_Node<T> > node_allocator;
         typedef typename node_allocator::pointer	node_pointer;
+
+		void _split_node(Doubly_Linked_Node<T> *node)
+		{
+			if (node->prev == _last_node)
+				_last_node->next = node->next;
+			else
+				node->prev->next = node->next;
+			if (node->next == _last_node)
+				_last_node->prev = node->prev;
+			else
+				node->next->prev = node->prev;
+		}
+
+//		template <class T, class Alloc>
+		friend bool operator!= (const ft::list<T,Alloc>& lhs, const ft::list<T,Alloc>& rhs)
+		{
+			return !(lhs == rhs);
+		}
 
         allocator_type 			_alloc;
         node_allocator			_node_alloc;
