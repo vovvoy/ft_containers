@@ -27,6 +27,10 @@ int main ()
         i++;
 //        begin++;
     }
+    begin = lst.begin();
+    end = lst.end();
+	while (begin != end)
+		std::cout << "lst->" << *begin++ << std::endl;
     std::cout << lst.size() << std::endl;
     return 0;
 }
